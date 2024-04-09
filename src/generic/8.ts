@@ -20,7 +20,7 @@ type Form = {
 
 // Реалізуйте Params так, щоб унеможливити поле 'errors' з типу Form
 type Params = {
-  params: Pick<Form, "email" | "firstName" | "lastName" | "phone">;
+  params: Omit<Form, "errors">;
 };
 
 export {};
